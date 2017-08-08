@@ -1,7 +1,7 @@
 import netCDF4;
 import os, sys;
 import numpy, math;
-from libraries import ftpManager;
+from libraries import satelite_FTP_Connector, model_FTP_Connector;
 from libraries import zipArchiveManager;
 from datetime import datetime,timedelta;
 
@@ -18,8 +18,8 @@ class SelectionController():
             hours=25)  # datetime.strptime('2017.02.13 08:15:00', '%Y.%m.%d %H:%M:%S')#"2017.03.03 02:15:00"#Нижний порог времени
 
         # Download archive with Satelite Data
-        #ftp = ftpManager.FTPConnector()
-        #ftp.getFilesWithSateliteData(firstDate, lastDate) #Format date must be Year.Month.Day Hout:minute:second
+        #ftp = satelite_FTP_Connector.SateliteFTPConnector(enteredDate, "avisoftp.cnes.fr")
+        #ftp.getFiles() #Format date must be Year.Month.Day Hout:minute:second
 
         # Unpack downloaded archives
         #archive = zipArchiveManager.ZIPController()
@@ -73,8 +73,8 @@ class SelectionController():
 
     def getModelData(self, arrSatDat, enteredDate):
         # Download archive with Model Data
-        #ftp = ftpManager.FTPConnector()
-        #ftp.getFilesWithModelData(enteredDate) #Format date must be Year.Month.Day Hout:minute:second
+        #ftp = model_FTP_Connector.SateliteFTPConnector("innovation.org.ru", "diplom", "QNLN9p?7b")
+        #ftp.getFiles() #Format date must be Year.Month.Day Hout:minute:second
 
         # Unpack downloaded archives
         #archive = zipArchiveManager.ZIPController()

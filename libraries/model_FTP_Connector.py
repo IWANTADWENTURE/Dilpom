@@ -11,7 +11,7 @@ class SateliteFTPConnector(Connector):
     __path=None
     __enteredDate=None
 
-    def __init__(self, enteredDate, host='', login='', password='', path='ftp/satelite'):
+    def __init__(self, enteredDate, host='', login='', password='', path='ftp/model'):
         self.__host=host
         self.__login=login
         self.__password=password

@@ -45,6 +45,6 @@ class SateliteFTPConnector(Connector):
                                          int(dirFile.split('_')[4][6:8]), int(dirFile.split('_')[5][0:2]),
                                          int(dirFile.split('_')[5][2:4]), int(dirFile.split('_')[5][4:6]))
                 if ((dateFileValue >= self.__beginOfTime) & (dateFileValue <= self.__endOfTime)):
-                    self.downFiles(dirFile, 'ftp/satelite/');
+                    self.downloadFile(dirFile, 'ftp/satelite/');
             self.__ftp.cwd('..')
 

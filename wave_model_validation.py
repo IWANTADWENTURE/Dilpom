@@ -23,12 +23,6 @@ arrayOfUnitedData=[0]*6
 arrayOfUnitedData[0]=[arrayOfSateliteData[0][:],arrayOfSateliteData[1][:],arrayOfSateliteData[2][:],arrayOfSateliteData[12][:]]
 arrayOfUnitedData[1:]=selMan.getModelData(arrayOfSateliteData, enteredDate)
 
-i=0
-while i<len(arrayOfUnitedData[0][3]):
-    print(arrayOfUnitedData[0][3][i], arrayOfUnitedData[-1][3][i])
-    i+=1
-
-
 RMSE, ME, SD, SI, r=[0]*5,[0]*5,[0]*5,[0]*5,[0]*5
 i=0;
 while i<len(arrayOfUnitedData[0][0]):
