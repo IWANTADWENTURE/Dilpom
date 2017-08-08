@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 import numpy;
 import os, sys;
 
-def Fun():
-    RD= [0]*7;
-    return RD;
-print(Fun())
+
+
+s, s1=1, 2
+print(s)
 """
 
 __hostSatelite = "avisoftp.cnes.fr"

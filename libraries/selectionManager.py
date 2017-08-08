@@ -1,15 +1,12 @@
 import netCDF4;
 import os, sys;
 import numpy, math;
-from libraries import satelite_FTP_Connector, model_FTP_Connector;
-from libraries import zipArchiveManager;
-from datetime import datetime,timedelta;
+from libraries import satelite_FTP_Connector
+from libraries import model_FTP_Connector
+from libraries import zipArchiveManager
+from datetime import datetime,timedelta
 
 class SelectionController():
-
-    __list_ncvariables = ['time', 'lat', 'lon', 'range_numval_ku', 'range_rms_ku', 'alt', 'range_ku', 'iono_corr_alt_ku',
-                        'sea_state_bias_ku', 'ocean_tide_sol1', 'solid_earth_tide', 'pole_tide', 'swh_ku', 'sig0_ku',
-                        'wind_speed_alt', 'off_nadir_angle_wf_ku', 'sig0_rms_ku', 'sig0_numval_ku'];
     __time_units=None
     def getSateliteData(self, enteredDate):
         firstDate = enteredDate - timedelta(
@@ -73,7 +70,7 @@ class SelectionController():
 
     def getModelData(self, arrSatDat, enteredDate, numOfProgn):
         # Download archive with Model Data
-        #ftp = model_FTP_Connector.SateliteFTPConnector("innovation.org.ru", "diplom", "QNLN9p?7b", numOfProgn)
+        #ftp = model_FTP_Connector.ModelFTPConnector(enteredDate, numOfProgn, "innovation.org.ru", "diplom", "QNLN9p?7b")
         #ftp.getFiles() #Format date must be Year.Month.Day Hout:minute:second
 
         # Unpack downloaded archives

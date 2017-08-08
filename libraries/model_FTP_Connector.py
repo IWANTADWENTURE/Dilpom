@@ -1,8 +1,8 @@
-from libraries import Connector
+from libraries.Connector import ConnectorInterface
 from datetime import datetime, timedelta
-import FTP
+from ftplib import FTP
 
-class SateliteFTPConnector(Connector):
+class ModelFTPConnector(ConnectorInterface):
 
     __ftp=None
     __host=None
@@ -12,11 +12,11 @@ class SateliteFTPConnector(Connector):
     __enteredDate=None
     __numOfProgn=None
 
-    def __init__(self, numOfProgn, enteredDate, host='', login='', password='', path='ftp/model'):
+    def __init__(self, enteredDate, numOfProgn, host='', login='', password='', pathForFiles='ftp/model'):
         self.__host=host
         self.__login=login
         self.__password=password
-        self.__path=path
+        self.__path=pathForFiles
         self.__enteredDate=enteredDate
         self.__numOfProgn=numOfProgn
 

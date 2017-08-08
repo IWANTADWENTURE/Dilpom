@@ -1,8 +1,8 @@
-from libraries import Connector
+from libraries.Connector import ConnectorInterface
 from datetime import datetime, timedelta
-import FTP
+from ftplib import FTP
 
-class SateliteFTPConnector(Connector):
+class SateliteFTPConnector(ConnectorInterface):
 
     __ftp=None
     __host=None
@@ -13,11 +13,11 @@ class SateliteFTPConnector(Connector):
     __beginOfTime=None
     __endOfTime=None
 
-    def __init__(self, enteredDate, host='', login='', password='', path='ftp/satelite'):
+    def __init__(self, enteredDate, host, login='', password='', pathForFiles='ftp/satelite'):
         self.__host=host
         self.__login=login
         self.__password=password
-        self.__path=path
+        self.__path=pathForFiles
         self.__enteredDate=enteredDate
         self.__beginOfTime=enteredDate-timedelta(hours=1)#datetime.strptime('2017.02.03 10:00:00', '%Y.%m.%d %H:%M:%S')#"2017.03.02 23:15:00"#Верний порог времени
         self.__endOfTime=enteredDate+timedelta(hours=25)#datetime.strptime('2017.02.13 08:15:00', '%Y.%m.%d %H:%M:%S')#"2017.03.03 02:15:00"#Нижний порог времени
@@ -35,9 +35,9 @@ class SateliteFTPConnector(Connector):
     def checkDownloadFile(self):
         pass
 
-    def getFiles(self, path='AVISO/pub/jason-2/igdr/'):
+    def getFiles(self, firstDate, lastDate, pathToDir='AVISO/pub/jason-2/igdr/'):
         self.connect()
-        self.__ftp.cwd(path)
+        self.__ftp.cwd(pathToDir)
         for cycle in self.__ftp.nlst():
             self.__ftp.cwd(cycle + "/")
             for dirFile in self.__ftp.nlst():

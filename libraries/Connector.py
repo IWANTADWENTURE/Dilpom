@@ -1,6 +1,6 @@
 from abc import abstractmethod, abstractproperty
 
-class ConnectorInterface():
+class ConnectorInterface(object):
 
     @abstractmethod
     def connect(self):
