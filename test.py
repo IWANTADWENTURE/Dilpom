@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import netCDF4;
 import frpManager;
 import urllib.request;
@@ -72,7 +71,6 @@ print(ncfile.variables['range_ku'][:])
 #z.close()
 ncfile.close()
 """""
-=======
 from zipfile import ZipFile;
 from netCDF4 import Dataset;
 import frpManager;
@@ -130,4 +128,3 @@ print(ncfile.variables['range_ku'][:])
 #print(ncfile.units)
 #z.close()
 ncfile.close()
->>>>>>> refs/remotes/origin/IWANTADWENTURE-patch-1
