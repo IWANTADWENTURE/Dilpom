@@ -71,9 +71,9 @@ class SelectionController():
             y += 1
         return arrSatDat;
 
-    def getModelData(self, arrSatDat, enteredDate):
+    def getModelData(self, arrSatDat, enteredDate, numOfProgn):
         # Download archive with Model Data
-        #ftp = model_FTP_Connector.SateliteFTPConnector("innovation.org.ru", "diplom", "QNLN9p?7b")
+        #ftp = model_FTP_Connector.SateliteFTPConnector("innovation.org.ru", "diplom", "QNLN9p?7b", numOfProgn)
         #ftp.getFiles() #Format date must be Year.Month.Day Hout:minute:second
 
         # Unpack downloaded archives

@@ -11,10 +11,15 @@ import statsmodels;
 import pandas;
 
 if __name__=="__main__":
-    if len(sys.argv) == 2:
+    if len(sys.argv) == 3:
         enteredDate = datetime.strptime(sys.argv[1]+' 00:00:00', '%Y.%m.%d %H:%M:%S')
+        numberOfPrognosis=sys.argv[2]
+    elif len(sys.argv) == 2:
+        enteredDate = datetime.strptime(sys.argv[1] + ' 00:00:00', '%Y.%m.%d %H:%M:%S')
+        numberOfPrognosis=6
     else:
         enteredDate=datetime.strptime('2017.02.15 00:00:00', '%Y.%m.%d %H:%M:%S')
+        numberOfPrognosis=6
 ifRendering=True;
 #list_ncvariables=['time','lat','lon','range_numval_ku','range_rms_ku', 'alt','range_ku','iono_corr_alt_ku','sea_state_bias_ku','ocean_tide_sol1','solid_earth_tide','pole_tide','swh_ku','sig0_ku','wind_speed_alt','off_nadir_angle_wf_ku','sig0_rms_ku','sig0_numval_ku'];
 
@@ -23,7 +28,7 @@ arrayOfSateliteData=selMan.getSateliteData(enteredDate)
 
 arrayOfUnitedData=[0]*6
 arrayOfUnitedData[0]=[arrayOfSateliteData[0][:],arrayOfSateliteData[1][:],arrayOfSateliteData[2][:],arrayOfSateliteData[12][:]]
-arrayOfUnitedData[1:]=selMan.getModelData(arrayOfSateliteData, enteredDate)
+arrayOfUnitedData[1:]=selMan.getModelData(arrayOfSateliteData, enteredDate, numberOfPrognosis)
 
 RMSE, ME, SD, SI, r=[0]*5,[0]*5,[0]*5,[0]*5,[0]*5
 i=0;

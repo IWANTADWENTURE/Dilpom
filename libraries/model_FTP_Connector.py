@@ -10,13 +10,15 @@ class SateliteFTPConnector(Connector):
     __password=None
     __path=None
     __enteredDate=None
+    __numOfProgn=None
 
-    def __init__(self, enteredDate, host='', login='', password='', path='ftp/model'):
+    def __init__(self, numOfProgn, enteredDate, host='', login='', password='', path='ftp/model'):
         self.__host=host
         self.__login=login
         self.__password=password
         self.__path=path
         self.__enteredDate=enteredDate
+        self.__numOfProgn=numOfProgn
 
     def connect(self):
         self.__ftp=FTP(self.__host)
@@ -35,7 +37,7 @@ class SateliteFTPConnector(Connector):
         self.connect()
         self.__ftp.cwd(path)
         i=0;
-        while i<6:
+        while i<self.__numOfProgn:
             if(((self.__enteredDate.day-i)>0)& (self.__enteredDate.day-i<31)):
                 try:
                     self.__ftp.cwd(self.__enteredDate.year.__str__()+
