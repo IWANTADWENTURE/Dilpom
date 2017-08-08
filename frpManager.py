@@ -19,7 +19,6 @@ class FTPConnector():
     def read_file_to_bytes(self, file_name, output):
         self.__ftp.retrbinary("RETR %s" % file_name, output.write)
 
-
     def __init__(self):
         self.connect()
 
@@ -27,19 +26,14 @@ class FTPConnector():
         self.__ftp = FTP(host)
         self.__ftp.login(login, password)
 
-    def getFilesFromDir(self):
+    def getFilesFromDir(self, firstDate, lastDate):
         self.__ftp.cwd('AVISO/pub/jason-2/igdr/cycle_319')
+        listFileForDownload=[];
         for dirFile in self.__ftp.nlst():
-            print(dirFile.split('_')[4])
-            #print(int(dirFile.split('_')[4][0:4]))
-            #print(int(dirFile.split('_')[4][4:6]))
-            #print(int(dirFile.split('_')[4][6:8]))
             dateFileValue=datetime(int(dirFile.split('_')[4][0:4]), int(dirFile.split('_')[4][4:6]), int(dirFile.split('_')[4][6:8]))
-            if(dateFileValue>datetime.strptime('2017-03-02', '%Y-%m-%d')):
-                print('yes')
-            else:
-                print('no')
-
+            if(dateFileValue>datetime.strptime(firstDate, '%Y.%m.%d')):
+                listFileForDownload.append(dirFile);
+        print(listFileForDownload);
     def printer(self):
         self.__ftp.cwd('AVISO/pub/jason-2/igdr/cycle_319')
         print(self.__ftp.nlst())
