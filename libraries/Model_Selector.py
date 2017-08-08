@@ -19,6 +19,7 @@ class ModelSelector(SelectorInterface):
         y = 0;
         arrUnDat = [0] * 5
         for nc in os.listdir('ftp/model/'):
+            print(nc)
             arrayOfModelData = [0] * 4
             ncfile = netCDF4.Dataset('ftp/model/' + nc)
             lat = ncfile.variables['lat'][:];
@@ -27,24 +28,24 @@ class ModelSelector(SelectorInterface):
             mod_time_units = ncfile.variables['time'].units;
             i = 0;
             while i < len(arrSatDat[0]):
-                itime = math.floor((arrSatDat[0][i] - netCDF4.date2num(
+                itime = math.floor(abs(arrSatDat[0][i] - netCDF4.date2num(
                     netCDF4.num2date(time[0], mod_time_units), time_units)) /
                                    (netCDF4.date2num(netCDF4.num2date(time[1], ncfile.variables['time'].units),
                                                      time_units) -
                                     netCDF4.date2num(netCDF4.num2date(time[0], ncfile.variables['time'].units),
                                                      time_units)))
-                if ((itime >= 0) & (itime+1 <= 23)):
+                if ((itime >= 0) & (itime+1 < 24)):
                     if ((abs(arrSatDat[0][i]
                                  - netCDF4.date2num(netCDF4.num2date(time[itime + 1], mod_time_units), time_units))) <
                             (abs(arrSatDat[0][i]
                                      - netCDF4.date2num(netCDF4.num2date(time[itime], mod_time_units), time_units)))):
                         itime += 1;
                 ilt = math.floor(((arrSatDat[1][i] - lat[0]) / (lat[1] - lat[0])))
-                if ((ilt >= 0) & (ilt <= 131)):
+                if ((ilt >= 0) & (ilt+1 < 132)):
                     if ((abs(arrSatDat[1][i] - lat[ilt + 1])) < (abs(arrSatDat[1][i] - lat[ilt]))):
                         ilt += 1;
                 iln = math.floor(((arrSatDat[2][i] - lon[0]) / (lon[1] - lon[0])))
-                if ((iln >= 0) & (iln <= 237)):
+                if ((iln >= 0) & (iln+1 <238)):
                     if ((abs(arrSatDat[2][i] - lon[iln + 1])) < (abs(arrSatDat[2][i] - lon[iln]))):
                         iln += 1;
                 arrayOfModelData[0] = numpy.hstack((arrayOfModelData[0], time[itime]));
@@ -62,4 +63,7 @@ class ModelSelector(SelectorInterface):
             arrUnDat[y][2] = numpy.delete(arrUnDat[y][2], 0);
             arrUnDat[y][3] = numpy.delete(arrUnDat[y][3], 0);
             y += 1
-        return arrUnDat
+        while y < len(arrUnDat):
+            y += 1
+
+        return arrUnDat, mod_time_units

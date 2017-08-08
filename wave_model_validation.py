@@ -1,13 +1,9 @@
 import netCDF4;
-from libraries import ftpManager;
-from libraries import zipArchiveManager;
 from libraries import plotManager, Satelite_Selector,Model_Selector;
-from datetime import datetime,timedelta;
+from datetime import datetime;
 import numpy;
 import os, sys;
-import math;
 import statistics;
-import statsmodels;
 import pandas;
 
 if __name__=="__main__":
@@ -22,9 +18,11 @@ if __name__=="__main__":
         numberOfPrognosis=6
 
 
-list_ncvariables = ['time', 'lat', 'lon', 'range_numval_ku', 'range_rms_ku', 'alt', 'range_ku', 'iono_corr_alt_ku',
+list_ncvariables1 = ['time', 'lat', 'lon', 'range_numval_ku', 'range_rms_ku', 'alt', 'range_ku', 'iono_corr_alt_ku',
                     'sea_state_bias_ku', 'ocean_tide_sol1', 'solid_earth_tide', 'pole_tide', 'swh_ku', 'sig0_ku',
                     'wind_speed_alt', 'off_nadir_angle_wf_ku', 'sig0_rms_ku', 'sig0_numval_ku'];
+list_ncvariables=['time', 'lat', 'lon', 'swh_ku', 'range_rms_ku', 'range_numval_ku',
+                  'sea_state_bias_ku', 'off_nadir_angle_wf_ku', 'sig0_ku', 'sig0_rms_ku', 'sig0_numval_ku', 'wind_speed_alt']
 ifRendering=True;
 #list_ncvariables=['time','lat','lon','range_numval_ku','range_rms_ku', 'alt','range_ku','iono_corr_alt_ku','sea_state_bias_ku','ocean_tide_sol1','solid_earth_tide','pole_tide','swh_ku','sig0_ku','wind_speed_alt','off_nadir_angle_wf_ku','sig0_rms_ku','sig0_numval_ku'];
 
@@ -33,9 +31,18 @@ arrayOfSateliteData, time_units=sel.getData(enteredDate)
 
 sel=Model_Selector.ModelSelector()
 arrayOfUnitedData=[0]*6
-arrayOfUnitedData[0]=[arrayOfSateliteData[0][:],arrayOfSateliteData[1][:],arrayOfSateliteData[2][:],arrayOfSateliteData[12][:]]
-arrayOfUnitedData[1:]=sel.getData(arrayOfSateliteData, enteredDate, numberOfPrognosis, time_units)
-
+arrayOfUnitedData[0]=[arrayOfSateliteData[0][:],arrayOfSateliteData[1][:],arrayOfSateliteData[2][:],arrayOfSateliteData[3][:]]
+arrayOfUnitedData[1:], mod_time_units=sel.getData(arrayOfSateliteData, enteredDate, numberOfPrognosis, time_units)
+i=0
+print('{0:26} {1:19} {2:9} {3:9} {4:9} {5:9} {6:8} {7:8}'.format(
+    'timeSat', 'timeMod', 'lon', 'lonMod', 'lat', 'latMod', 'hsig', 'hsig_mod'))
+while i<len(arrayOfUnitedData[0][0]):
+    print('{0:} {1:} {2:9f} {3:9f} {4:9f} {5:9f} {6:8f} {7:8f}'.format(
+        netCDF4.num2date(arrayOfUnitedData[0][0][i],time_units), netCDF4.num2date(arrayOfUnitedData[5][0][i], mod_time_units),
+        arrayOfUnitedData[0][2][i],arrayOfUnitedData[5][2][i], arrayOfUnitedData[0][1][i],arrayOfUnitedData[5][1][i],
+        arrayOfUnitedData[0][3][i],arrayOfUnitedData[5][3][i]
+    ))
+    i+=1
 RMSE, ME, SD, SI, r=[0]*5,[0]*5,[0]*5,[0]*5,[0]*5
 i=0;
 while i<len(arrayOfUnitedData[0][0]):

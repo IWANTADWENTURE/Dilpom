@@ -35,7 +35,7 @@ class SateliteFTPConnector(ConnectorInterface):
     def checkDownloadFile(self):
         pass
 
-    def getFiles(self, firstDate, lastDate, pathToDir='AVISO/pub/jason-2/igdr/'):
+    def getFiles(self, pathToDir='AVISO/pub/jason-2/igdr/'):
         self.connect()
         self.__ftp.cwd(pathToDir)
         for cycle in self.__ftp.nlst():
@@ -47,4 +47,5 @@ class SateliteFTPConnector(ConnectorInterface):
                 if ((dateFileValue >= self.__beginOfTime) & (dateFileValue <= self.__endOfTime)):
                     self.downloadFile(dirFile, 'ftp/satelite/');
             self.__ftp.cwd('..')
+        self.disconnect()
 
