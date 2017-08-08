@@ -10,11 +10,13 @@ import statistics;
 import statsmodels;
 import pandas;
 
-enteredDate=datetime.strptime('2017.02.15 00:00:00', '%Y.%m.%d %H:%M:%S')
+if __name__=="__main__":
+    if len(sys.argv) == 2:
+        enteredDate = datetime.strptime(sys.argv[1]+' 00:00:00', '%Y.%m.%d %H:%M:%S')
+    else:
+        enteredDate=datetime.strptime('2017.02.15 00:00:00', '%Y.%m.%d %H:%M:%S')
 ifRendering=True;
-list_ncvariables=['time','lat','lon','range_numval_ku','range_rms_ku', 'alt','range_ku','iono_corr_alt_ku','sea_state_bias_ku','ocean_tide_sol1','solid_earth_tide','pole_tide','swh_ku','sig0_ku','wind_speed_alt','off_nadir_angle_wf_ku','sig0_rms_ku','sig0_numval_ku'];
-firstDate=enteredDate-timedelta(hours=1)#datetime.strptime('2017.02.03 10:00:00', '%Y.%m.%d %H:%M:%S')#"2017.03.02 23:15:00"#Верний порог времени
-lastDate=enteredDate+timedelta(hours=25)#datetime.strptime('2017.02.13 08:15:00', '%Y.%m.%d %H:%M:%S')#"2017.03.03 02:15:00"#Нижний порог времени
+#list_ncvariables=['time','lat','lon','range_numval_ku','range_rms_ku', 'alt','range_ku','iono_corr_alt_ku','sea_state_bias_ku','ocean_tide_sol1','solid_earth_tide','pole_tide','swh_ku','sig0_ku','wind_speed_alt','off_nadir_angle_wf_ku','sig0_rms_ku','sig0_numval_ku'];
 
 selMan=selectionManager.SelectionController();
 arrayOfSateliteData=selMan.getSateliteData(enteredDate)
