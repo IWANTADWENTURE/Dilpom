@@ -2,13 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5882e5d0-be64-4e60-ae91-0af66bfe7dd0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/Dilpom.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP319_001_20170223_063707_20170223_073320.zip" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_066_20170205_233402_20170206_003015.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_067_20170206_003015_20170206_012628.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_068_20170206_012628_20170206_022241.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_069_20170206_022241_20170206_031854.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_070_20170206_031854_20170206_041507.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_071_20170206_041507_20170206_051120.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_072_20170206_051120_20170206_060732.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_073_20170206_060732_20170206_070345.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_074_20170206_070345_20170206_075958.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_075_20170206_075958_20170206_085611.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_076_20170206_085611_20170206_095224.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_077_20170206_095224_20170206_104837.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_078_20170206_104837_20170206_114450.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_079_20170206_114450_20170206_124102.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_080_20170206_124102_20170206_133715.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_081_20170206_133715_20170206_143328.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_082_20170206_143328_20170206_152941.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_083_20170206_152941_20170206_162554.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_084_20170206_162554_20170206_172207.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_085_20170206_172207_20170206_181820.nc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ftp/ddd/JA2_IPN_2PdP317_086_20170206_181820_20170206_191433.nc" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/Diplom.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/model/20170206_hi-MFCBS-MODEL-SWAN-BLS-b20170202-fv01.0.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/model/20170206_hi-MFCBS-MODEL-SWAN-BLS-b20170203-fv01.0.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/model/20170206_hi-MFCBS-MODEL-SWAN-BLS-b20170204-fv01.0.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/model/20170206_hi-MFCBS-MODEL-SWAN-BLS-b20170205-fv01.0.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/model/20170206_hi-MFCBS-MODEL-SWAN-BLS-b20170206-fv01.0.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_066_20170205_233402_20170206_003015.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_067_20170206_003015_20170206_012628.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_068_20170206_012628_20170206_022241.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_069_20170206_022241_20170206_031854.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_070_20170206_031854_20170206_041507.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_071_20170206_041507_20170206_051120.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_072_20170206_051120_20170206_060732.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_073_20170206_060732_20170206_070345.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_074_20170206_070345_20170206_075958.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_075_20170206_075958_20170206_085611.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_076_20170206_085611_20170206_095224.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_077_20170206_095224_20170206_104837.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_078_20170206_104837_20170206_114450.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_079_20170206_114450_20170206_124102.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_080_20170206_124102_20170206_133715.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_081_20170206_133715_20170206_143328.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_082_20170206_143328_20170206_152941.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_083_20170206_152941_20170206_162554.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_084_20170206_162554_20170206_172207.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_085_20170206_172207_20170206_181820.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_086_20170206_181820_20170206_191433.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_087_20170206_191433_20170206_201045.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_088_20170206_201045_20170206_210658.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_089_20170206_210658_20170206_220311.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_090_20170206_220311_20170206_225924.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_091_20170206_225924_20170206_235537.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_092_20170206_235537_20170207_005150.nc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ftp/satelite/JA2_IPN_2PdP317_093_20170207_005150_20170207_014803.nc" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/ftpManager.py" afterPath="$PROJECT_DIR$/libraries/ftpManager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/zipArchiveManager.py" afterPath="$PROJECT_DIR$/libraries/zipArchiveManager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test1.py" afterPath="$PROJECT_DIR$/test1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/plotManager.py" afterPath="$PROJECT_DIR$/libraries/plotManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/selectionManager.py" afterPath="$PROJECT_DIR$/libraries/selectionManager.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wave_model_validation.py" afterPath="$PROJECT_DIR$/wave_model_validation.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,10 +106,13 @@
       <file leaf-file-name="wave_model_validation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wave_model_validation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" column="29" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <marker date="1495240884000" expanded="true" signature="1482:2247" ph="..." />
+                <marker date="1495240884000" expanded="true" signature="2269:2566" ph="..." />
+                <marker date="1495240884000" expanded="true" signature="2684:2770" ph="..." />
               </folding>
             </state>
           </provider>
@@ -63,8 +121,8 @@
       <file leaf-file-name="selectionManager.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libraries/selectionManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="-187">
+              <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -145,8 +203,8 @@
         <option value="$PROJECT_DIR$/libraries/zipArchiveManager.py" />
         <option value="$PROJECT_DIR$/libraries/plotManager.py" />
         <option value="$PROJECT_DIR$/test1.py" />
-        <option value="$PROJECT_DIR$/libraries/selectionManager.py" />
         <option value="$PROJECT_DIR$/wave_model_validation.py" />
+        <option value="$PROJECT_DIR$/libraries/selectionManager.py" />
       </list>
     </option>
   </component>
@@ -536,6 +594,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <marker date="1495240884000" expanded="true" signature="1482:2247" ph="..." />
+            <marker date="1495240884000" expanded="true" signature="2269:2566" ph="..." />
+            <marker date="1495240884000" expanded="true" signature="2684:2770" ph="..." />
           </folding>
         </state>
       </provider>
@@ -576,6 +637,9 @@
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <marker date="1495240884000" expanded="true" signature="1482:2247" ph="..." />
+            <marker date="1495240884000" expanded="true" signature="2269:2566" ph="..." />
+            <marker date="1495240884000" expanded="true" signature="2684:2770" ph="..." />
           </folding>
         </state>
       </provider>
@@ -921,18 +985,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wave_model_validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="29" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <marker date="1495240884000" expanded="true" signature="1482:2247" ph="..." />
+            <marker date="1495240884000" expanded="true" signature="2269:2566" ph="..." />
+            <marker date="1495240884000" expanded="true" signature="2684:2770" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/selectionManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        <state relative-caret-position="-187">
+          <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

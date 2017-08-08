@@ -65,7 +65,6 @@ class FTPConnector():
 
     def checkDownloadFiles(self,filesList):
         if(self.__ftp.pwd()=='AVISO/pub/jason-2/igdr/cycle_317/'):
-
             listFileFromFtpDir = self.__ftp.nlst()
             for nameFile in filesList:
                 if (os.path.getsize('ftp/satelite/' + nameFile) != self.__ftp.size(nameFile)):
